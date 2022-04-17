@@ -29,3 +29,11 @@ element Vertex end
  end
  delete frontier;
  end
+
+ 
+ 
+ configApplyDirection("s0:s1", "DensePull-SparsePush")
+ configApplyDenseVertexSet("s0:s1", "src-vertexset",
+ "bitvector", "DensePull")
+ configApplyParallelization("s0:s1",
+ "dynamic-vertex-parallel")
