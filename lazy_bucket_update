@@ -1,14 +1,14 @@
 
 Dist = {∞, . . . , ∞} ▷ Length |V | array
-2 procedure SSSP with ∆-stepping(Graph G, ∆, startV)
-3 B = new ThreadLocalBuckets(Dist, ∆, startV);
-4 for threadID : threads do
-5 B.append(new LocalBucket());
-6 Dist[startV] = 0
-7 while ¬empty B do
-8 minBucket = B.getGlobalMinBucket()
-9 parallel for threadID : threads do
-10 for src : minBucket.getVertices(threadID) do
-11 for e : G.getOutEdge[src] do
-12 Dist[e.dst] = min(Dist[e.dst], Dist[src] + e.weight)
-13 B[threadID].updateBucket(e.dst, ⌊Dist[e.dst]/∆⌋)
+ procedure SSSP with ∆-stepping(Graph G, ∆, startV)
+ B = new ThreadLocalBuckets(Dist, ∆, startV);
+ for threadID : threads do
+ B.append(new LocalBucket());
+ Dist[startV] = 0
+ while ¬empty B do
+ minBucket = B.getGlobalMinBucket()
+ parallel for threadID : threads do
+ for src : minBucket.getVertices(threadID) do
+ for e : G.getOutEdge[src] do
+ Dist[e.dst] = min(Dist[e.dst], Dist[src] + e.weight)
+ B[threadID].updateBucket(e.dst, ⌊Dist[e.dst]/∆⌋)
