@@ -31,7 +31,7 @@ element Vertex end
  end
 
  
- 
+ schedule:
  configApplyDirection("s0:s1", "DensePull-SparsePush")
  configApplyDenseVertexSet("s0:s1", "src-vertexset",
  "bitvector", "DensePull")
