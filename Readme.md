@@ -5,6 +5,7 @@
      algorithm used by Google Search to rank web pages in their search engine results.
 
 
+# Bucketing #
 Bucketing is generally used to exploit parallelism and maintain ordering in ordered graph algorithms.
 It is expressive enough to implement many parallel ordered
 graph algorithms. Existing frameworks support either lazy bucket update or eager bucket update approach.
