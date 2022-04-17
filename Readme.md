@@ -1,4 +1,12 @@
-# My GraphIt Codes
+# My GraphIt Codes #
+     GraphIt is a new domain-specific language that achieves high-performance
+     across different algorithms, graphs, and architectures, while offering an easy-to-use
+     high-level programming model. GraphIt decouples algorithms from performance optimizations (schedules) for graph applications to make it easy to            explore a large space
+     of cache, NUMA, load balance, and data layout optimizations. As of now, GraphIt
+     supports a wide range of applications, many different data structures, and numerous
+     performance optimizations.
+     
+     
 
 
 # PageRank (PR) Algorithm #
