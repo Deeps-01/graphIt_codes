@@ -18,4 +18,4 @@ either an eager bucket update  approach or a lazy bucket
 update approach.
 
 
-GraphIt decouples the algorithm from optimizations for unordered graph algorithms.
+<b> GraphIt decouples the algorithm from optimizations for unordered graph algorithms.
